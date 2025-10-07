@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main() {
+    int a[5], n, i;
+
+    printf("Enter number of elements (max 5): ");
+    scanf("%d", &n);
+
+    if(n > 5 || n <= 0) {
+        printf("Invalid size! Enter between 1 and 5.\n");
+        return 0;
+    }
+
+    printf("Enter %d elements:\n", n);
+    for(i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    printf("Reversed array:\n");
+    for(i = n-1; i >= 0; i--) {
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
